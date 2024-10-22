@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		sh 'cd /home/cloud_user/cicd-pipeline-train-schedule-pipelines' && './gradlew build'
+		sh './gradlew build'
 		archiveArtifacts artifacts: '/dist/trainSchedule.zip'
             }
         }
